@@ -47,7 +47,7 @@ Structure
 
 * **dark.card**
 
-	In case hp_map.root does not exist, you can build your own hot pixel map. 
+	In case hp_map.root does not exist, you can build your own hot pixel map.   
 	Put the addresses of ROOT files with dark images in this card file.
 
 * **hp_macro.sh**
