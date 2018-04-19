@@ -389,4 +389,3 @@ void locate(TH2S *data, double threshold)
 	cout << "\nTotal Number: " << total << endl;
 
 }
-

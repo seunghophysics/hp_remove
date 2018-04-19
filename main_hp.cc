@@ -8,7 +8,7 @@
 
 using namespace std;
 
-const char *obj_name = "t1";
+const char *obj_name = "t1";  // Default object name of the histograms in ROOT files. Change this if necessary.
 
 int main(int argc, char *argv[])
 {
@@ -28,12 +28,12 @@ int main(int argc, char *argv[])
 	int range[4] = {100, 1500, 100, 1100};
 	TH2S *cut_data = cut_hist(data, range);
 
-	ifstream f("hp_map.root");
+	ifstream f("hp_map.root");  // "hp_map.root" shall contain hot pixel "candidate map".
 
 	if(!f.good()){
 		cout << "\nThe hot pixel map does not exist. Creating a new one...\n" << endl;
 
-		ifstream g("dark.card");
+		ifstream g("dark.card");  // "dark.card" shall contain the addresses of raw ROOT files.
 		
 		if(!g.good()){
 			cout << "\nNo map card found. Try again with a map card. Exiting...\n" << endl;
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 
 	TH2S *mod1_data = mod1(cut_data, threshold);
 	TH2S *mod2_data = mod2(mod1_data, cut_map);
-	TH2S *mod3_data = mod3(mod2_data, 1.5);
+	TH2S *mod3_data = mod3(mod2_data, 1.5);		// Change the coefficent here as you want. (recommend > 1.2)
 
 	TFile *h = new TFile(output, "recreate");
 	mod3_data->Write();
