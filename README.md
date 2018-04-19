@@ -1,4 +1,5 @@
 hp_remove
+=========
 
 This is a tool for removing most of the hot pixels in a digital camera image in ROOT format. 
 Conversion of any raw camera image to ROOT is required before applying this program.
@@ -8,6 +9,7 @@ Quick Start
 ===========
 
 > make hp_remove
+
 > ./hp_remove [input root file] [output root file] [threshold]
 
 Example usage: > ./hp_remove ../BPM_ROOT/r0033_0005.root test_out.root 250
@@ -40,10 +42,10 @@ hp_macro.sh :
 
 For more details, check out individual files. 
 
-
+Contact
 ===========================
 Author : Seungho Han (SNU)
-Contact : v3pro2004@snu.ac.kr
+E-mail : v3pro2004@snu.ac.kr
 Last edited : April 19, 2018
 
 
