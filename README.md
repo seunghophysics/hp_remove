@@ -58,14 +58,14 @@ Structure
 For more details, check out individual files. 
 
 
-Hot Pixel Modereation Sequences
+Hot Pixel Moderation Sequences
 ===============================
 
 There are three moderation steps applied in the main program.
 
 * **Mod1**
 
-	Averages out any pixel brighter than a pre-set threshold. Each hot pixel value is replaced with the average of its "good" neighbors(surrounding non-hot pixels with values lower than the thresold). The lower the threshold, the more bright pixels are removed. But you might not want to set it lower than your signal, because Mod1 might even average out good pixels in your signal. 
+	Averages out any pixel brighter than a pre-set threshold. Each hot pixel value is replaced with the average of its "good" neighbors(surrounding non-hot pixels with values lower than the thresold). The lower the threshold, the more bright pixels are removed. But you might not want to set it lower than your signal, because Mod1 might even average out the good pixels in your signal. 
 
 * **Mod2**
 	
