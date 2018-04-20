@@ -4,6 +4,12 @@ hp_remove
 This is a tool for removing most of the hot pixels in a digital camera image in ROOT format.  
 Conversion of any raw camera image to ROOT is required before applying this program.
 
+Compatibility
+=============
+
+Compiles and works well in macOS 10.13.4 with Xcode 9.3 and ROOT 6.10/08.
+Compiles and works well in Ubuntu 17.10 with GCC 7.2 and ROOT 6.12/04.
+
 Quick Start
 ===========
 
@@ -76,6 +82,8 @@ Note: Mod2 cannot remove "clustered" hot pixels, because in that case there can 
 * **Mod3**
 
 	Averages out any pixel which is some coefficient times brighter than the average of its surrounding neighbors. The coefficient is set to 1.5 by default. It averages out most of the left-out hot pixels after applying Mod1 and Mod2.
+
+The current version of the program cannot deal with hot pixel clusters with values lower than the pre-set threshold. Most of them can be avoided by setting a proper regional cut of the data, but they may cause a serious trouble in case some of them are located in the signal region.
 
 Contact
 ===========================
