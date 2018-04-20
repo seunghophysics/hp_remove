@@ -2,11 +2,11 @@
 export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$ROOTSYS/lib
 for filename in BPM_ROOT/*.root;
 do
-    rootfile="hp_removed/$(basename "$filename")"
+    rootfile="../hp_removed/$(basename "$filename")"
     if [ -e $rootfile ]; then
-	echo "$rootfile exists"
+	echo "$rootfile exists."
     else
-	echo "$rootfile does not exist"
-	./hp_remove $filename $rootfile 300
+	echo "$rootfile does not exist."
+	./hp_remove $filename $rootfile 300 # change theshold as you wish
     fi
 done
